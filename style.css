@@ -112,13 +112,12 @@ header {
 
 .mountains {
     position: absolute;
-    bottom: 0;
-    padding: 0px;
+    bottom: -1px;
+    margin: 0px;
+    max-width: 100%;
+    height: auto;   
 }
 
-.mountains img{
-    margin: 0px;
-}
 
 .hero .main {
     display: grid;
@@ -191,6 +190,7 @@ header {
     .offer p {
         width: 500px;
     }
+
 }
 
 @media screen and (max-width: 810px) {
