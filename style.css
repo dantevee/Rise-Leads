@@ -28,7 +28,7 @@ a {
 
 body {
     color: black;
-    background-color: #f9f9f9;
+    background-color: #12181b;
     height: 100%;
     width: 100%;
 }
@@ -62,12 +62,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
 }
 
 .logo {
-    font-weight: 1000;
+    font-weight: 800;
     font-size: 1.8em;
+}
+
+.logo a {
+    color: #f9f9f9;
 }
 
 .logo:hover {
@@ -80,6 +83,7 @@ header {
 
 .navlink {
     letter-spacing: 0;
+    color: #f9f9f9;
 }
 
 .navlink:hover {
@@ -87,9 +91,20 @@ header {
     letter-spacing: 5px;
 }
 
+@media screen and (max-width: 600px) {
+    .navlinks {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .logo {
+        font-size: 1.4em;
+    }
+}
 
 .hero {
-    height: 800px;
+    height: 700px;
     background-color: #3b947f;
     padding-top: 100px;
 }
@@ -162,4 +177,47 @@ header {
 
 .action-btn a:hover:after {
     width: 100%;
+}
+
+
+
+@media screen and (max-width: 1030px) {
+    .offer p {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .maintext {
+        width: 500px;
+        text-align: center;
+    }
+
+    .maintext h1 {
+        font-size: 2em;
+    }
+
+    .offer p {
+        font-size: 1em;
+    }
+
+    .hero .main {
+        height: 300px;
+    }
+
+    .mountains {
+        bottom: 100px;
+    }
+
+    .hero {
+        height: 600px;
+    }
+}
+
+
+
+.sub {
+    height: 1000px;
+    background: rgb(18, 24, 27);
+    background: linear-gradient(180deg, rgba(18, 24, 27, 1) 24%, rgba(29, 35, 48, 1) 81%);
 }
