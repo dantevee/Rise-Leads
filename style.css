@@ -237,7 +237,7 @@ header {
 }
 
 
-@media screen and (max-height: 760px) {
+/* @media screen and (max-height: 760px) {
     .hero {
         height: 500px;
     }
@@ -258,7 +258,7 @@ header {
     .main {
         height: 100px;
     }
-}
+} */
 
 
 .sub {
