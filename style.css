@@ -101,7 +101,13 @@ header {
     .logo {
         font-size: 1.4em;
     }
+
+    .hero {
+        padding-top: 0;
+    }
 }
+
+
 
 .hero {
     height: 700px;
@@ -234,6 +240,29 @@ header {
     .logo a {
         font-size: .8em;
     }
+
+    .hero {
+       height: 500px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .maintext {
+        width: 200px;
+    }
+
+    .offer p {
+        width: 200px;
+    }
+
+    .offer {
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
 }
 
 
