@@ -211,10 +211,6 @@ header {
         height: 300px;
     }
 
-    .mountains {
-        bottom: 100px;
-    }
-
     .hero {
         height: 600px;
     }
@@ -240,6 +236,29 @@ header {
     }
 }
 
+
+@media screen and (max-height: 760px) {
+    .hero {
+        height: 500px;
+    }
+}
+
+@media screen and (max-height: 640px) {
+    .hero {
+        height: 470px;
+    }
+}
+
+@media screen and (max-height: 590px) {
+    .hero {
+        height: 400px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .main {
+        height: 100px;
+    }
+}
 
 
 .sub {
