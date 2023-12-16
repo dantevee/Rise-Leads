@@ -4,6 +4,26 @@
     src: url(Raleway-VariableFont_wght.ttf);
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #25333a;
+    border: none;
+    border-radius: 1px;
+  }
+  
+
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -45,6 +65,12 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+#hdr {
+    grid-template-columns: none;
+    place-items: center;
+}
+
 
 .columns {
     display: flex;
