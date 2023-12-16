@@ -317,7 +317,67 @@ header {
 
 
 .sub {
-    height: 1000px;
+    height: 5000px;
     background: rgb(18, 24, 27);
     background: linear-gradient(180deg, rgba(18, 24, 27, 1) 24%, rgba(29, 35, 48, 1) 81%);
+}
+
+
+.about {
+    height: 700px;
+    padding: 50px;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.wandering {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.maintxt {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+.maintxt h2 {
+    font-size: 3em;
+    color: #f9f9f9;
+    width: 700px;
+}
+
+.maintxt h2 #cls {
+    color: #3b947f;
+}
+
+
+.maintxt h2 #how {
+    font-size: 2em;
+}
+
+.wandering video {
+    width: 500px;
+}
+
+.balh {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.arr {
+    transition: all 1s;
 }
