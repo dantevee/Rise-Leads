@@ -1,27 +1,23 @@
-/* SETUP */
+/* SETUP --------------------------------------------------------------------------------------------------------------*/
 @font-face {
     font-family: Raleway;
-    src: url(Raleway-VariableFont_wght.ttf);
+    src: url(graphics/Raleway.ttf);
 }
 
-/* width */
+
 ::-webkit-scrollbar {
     width: 15px;
   }
   
-  /* Track */
   ::-webkit-scrollbar-track {
     border-radius: 10px;
   }
    
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #25333a;
     border: none;
     border-radius: 1px;
   }
-  
-
 
 
 * {
@@ -35,15 +31,11 @@
     transition-timing-function: ease;
 }
 
+
 html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: black;
 }
 
 body {
@@ -53,12 +45,26 @@ body {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .border {
     border: 2px solid;
     border-color: red;
 }
 
-/* NAVBAR */
+.sub {
+    height: 5000px;
+    background: rgb(18, 24, 27);
+    background: linear-gradient(180deg, rgba(18, 24, 27, 1) 24%, rgba(29, 35, 48, 1) 81%);
+}
+
+
+
+
+/* NAVBAR -------------------------------------------------------------------------------------------------------------------*/
 header {
     width: 100%;
     height: 60px;
@@ -71,13 +77,13 @@ header {
     place-items: center;
 }
 
-
 .columns {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 5px;
 }
+
 
 .navlinks {
     display: grid;
@@ -89,6 +95,17 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+.navlink {
+    letter-spacing: 0;
+    color: #f9f9f9;
+}
+
+.navlink:hover {
+    color: #3b947f;
+    letter-spacing: 5px;
+}
+
 
 .logo {
     font-weight: 800;
@@ -107,15 +124,6 @@ header {
     cursor: context-menu;
 }
 
-.navlink {
-    letter-spacing: 0;
-    color: #f9f9f9;
-}
-
-.navlink:hover {
-    color: #3b947f;
-    letter-spacing: 5px;
-}
 
 @media screen and (max-width: 600px) {
     .navlinks {
@@ -135,6 +143,8 @@ header {
 
 
 
+
+/* HERO -----------------------------------------------------------------------------------------------------*/
 .hero {
     height: 700px;
     background-color: #3b947f;
@@ -142,19 +152,15 @@ header {
     position: relative;
 }
 
-.mountains {
-    position: absolute;
-    bottom: -1px;
-    margin: 0px;
-    max-width: 100%;
-    height: auto;   
-}
-
-
 .hero .main {
     display: grid;
     place-items: center;
     height: 500px;
+}
+
+.maintext {
+    width: 800px;
+    text-align: center;
 }
 
 .maintext h1 {
@@ -169,10 +175,15 @@ header {
     text-align: center;
 }
 
-.maintext {
-    width: 800px;
-    text-align: center;
+
+.mountains {
+    position: absolute;
+    bottom: -1px;
+    margin: 0px;
+    max-width: 100%;
+    height: auto;   
 }
+
 
 .action-btn a {
     display: block;
@@ -217,7 +228,6 @@ header {
 }
 
 
-
 @media screen and (max-width: 1030px) {
     .offer p {
         width: 500px;
@@ -247,7 +257,6 @@ header {
         height: 600px;
     }
 }
-
 
 @media screen and (max-width: 508px) {
     .maintext h1 {
@@ -292,37 +301,9 @@ header {
 }
 
 
-/* @media screen and (max-height: 760px) {
-    .hero {
-        height: 500px;
-    }
-}
-
-@media screen and (max-height: 640px) {
-    .hero {
-        height: 470px;
-    }
-}
-
-@media screen and (max-height: 590px) {
-    .hero {
-        height: 400px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    .main {
-        height: 100px;
-    }
-} */
 
 
-.sub {
-    height: 5000px;
-    background: rgb(18, 24, 27);
-    background: linear-gradient(180deg, rgba(18, 24, 27, 1) 24%, rgba(29, 35, 48, 1) 81%);
-}
-
-
+/* ABOUT ----------------------------------------------------------------------------------------------------------------------*/
 .about {
     height: 700px;
     padding: 50px;
@@ -374,10 +355,12 @@ header {
     align-items: center;
 }
 
+.arr {
+    transition: all 1s;
+}
+
 .invisible {
     opacity: 0;
 }
 
-.arr {
-    transition: all 1s;
-}
+
