@@ -47,7 +47,10 @@
     <!-- ABOUT US ------------------------------------------------------------------------------------------------------------------------------>
         <section class="about" id="about">
             <div class="wandering">
-                <video src="graphics/wandering.mp4" autoplay loop></video>
+                <video id="vid" src="graphics/wandering.mp4" loop autoplay muted></video>
+                <script>
+                    document.getElementById('vid').play();
+                </script>
             </div>
             <div class="maintxt">
                 <h2>We are exploring the internet world and bringing back new <span id="cls">clients for your business</span>
