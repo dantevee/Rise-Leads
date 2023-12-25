@@ -151,9 +151,9 @@ header {
 
 /* HERO -----------------------------------------------------------------------------------------------------*/
 .hero {
-    height: 700px;
+    height: 600px;
     background-color: #3b947f;
-    padding-top: 100px;
+    padding-top: 25px;
     position: relative;
 }
 
@@ -325,12 +325,12 @@ header {
 }
 
 .maintxt {
-    height: 100%;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .maintxt h2 {
@@ -354,7 +354,7 @@ header {
 
 .balh {
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

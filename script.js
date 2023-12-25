@@ -2,7 +2,7 @@ document.getElementById('moutnain').style.width = String(window.innerWidth) + 'p
 
 
 window.addEventListener('resize', () => {
-    document.getElementById('moutnain').style.width = String(windwo.innerWidth) + 'px';
+    document.getElementById('moutnain').style.width = String(window.innerWidth) + 'px';
 
 });
 
@@ -20,4 +20,4 @@ window.addEventListener('scroll', () => {
     
   });
 
- 
+ console.log(window.innerWidth)
