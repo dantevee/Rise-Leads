@@ -368,4 +368,46 @@ header {
     opacity: 0;
 }
 
+@media screen and (max-width: 1200px) {
+    .maintxt {
+        margin-top: 100px;
+        width: 500px;
+    }
 
+    .wandering video {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .maintxt {
+        margin-top: 0
+    }
+    .about {
+        grid-template-columns: 1fr;
+        place-items: center;
+        height: 900px;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    .wandering video {
+        width: 200px;
+    }
+
+    .maintxt {
+        width: 300px;
+    }
+
+    .maintxt h2 {
+        font-size: 1em;
+    }
+    
+}
+
+@media screen and (max-width: 552px) {
+    .maintxt {
+        width: 200px;
+    }
+
+}
