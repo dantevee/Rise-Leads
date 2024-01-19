@@ -48,23 +48,11 @@ a {
     color: black;
 }
 
-.border {
-    border: 2px solid;
-    border-color: red;
-}
-
-.sub {
-    height: 5000px;
-    background: rgb(18, 24, 27);
-    background: linear-gradient(180deg, rgba(18, 24, 27, 1) 24%, rgba(29, 35, 48, 1) 81%);
-}
-
 /* FORM -----------------------------------------------------------------------------------------------------*/
 .form {
     background-color: rgb(255, 167, 95);
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+    display: grid;
+    place-items: center;
     transition: all 1s;
 }
 
@@ -220,8 +208,9 @@ a {
 }
 
 .submit-btn {
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 100px;
     margin-bottom: 20px;
 }
@@ -237,6 +226,44 @@ a {
     border-radius: 4px;
     margin-top: 0px;
 
+}
+
+.action-btn a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    border: none;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    background: rgb(255, 167, 95);
+    color: black;
+    transition: color 100ms;
+}
+
+.action-btn a span {
+    position: relative;
+    z-index: 2;
+}
+
+.action-btn a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #f9f9f9;
+    transition: all .35s;
+}
+
+.action-btn a:hover:after {
+    width: 100%;
 }
 
 label {
@@ -289,3 +316,42 @@ label {
     padding: 8px;
     font-size: 16px;
   }
+  
+  @media screen and (max-width: 1000px) {
+    .form h1 {
+        font-size: 1.8rem;
+    
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .form h1 {
+        font-size: 1.2em;
+        font-weight: 1000;
+    }
+
+    .submit-btn {
+        justify-content: left;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .form h1 {
+        font-size: 1em;
+        font-weight: 1000;
+    }
+
+    .form h2 {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .form h1 {
+        font-size: .9em;
+    }
+
+    .form .question .day {
+        grid-template-columns: 40px 120px 900px;
+    }
+}
