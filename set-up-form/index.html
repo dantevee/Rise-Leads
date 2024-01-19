@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ADD USER DATABASE WHERE THEY LIG IN VIA EMAIL AND THEY CAN CHOOSE WHEN THEY DONT WANT CALLS -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+
+<body class="form" id="form">
+    <div class="main">
+        <h1 class="heading">Hey! Just answer few question and we can start🔥</h1>
+        <div class="questions">
+            <div class="question">
+                <h2>1. What is your name?</h2>
+                <input class="line-input" type="text" id="name" placeholder="Joe Mama">
+            </div>
+
+            <div class="question">
+                <h2>2. Do you have any conditions that your clients must meet?</h2>
+                <div class="yes-or-no">
+                    <div class="answer">
+                        <p>Yes</p><input type="checkbox" id="yes" onclick="yesOrNoCheckboxPressed(1)">
+                    </div>
+                    <div class="answer">
+                        <p>no</p><input type="checkbox" id="no" onclick="yesOrNoCheckboxPressed(0)">
+                    </div>
+                </div>
+                <p class="showonyes" style="margin-top: 20px;">What Conditions?</p>
+                <input class="line-input showonyes" type="text" id="conditions">
+            </div>
+
+            <div class="question">
+                <h2>3. How long is your 1st call with prospect?</h2>
+                <div class="minute-input">
+                    <input class="time-interval" type="number" min="10" placeholder="30" id="callLength">
+                    <p>minutes</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>4. Wha is your Timezone or Country?</h2>
+                <div class="timezonefield">
+                    <input type="text" id="country" name="country" placeholder="E.g., United States" required>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>5. When do you want your calls?</h2>
+                <div id="days">
+                    <div class="day">
+                        <input class="checkbox" type="checkbox" id="Monday" checked onclick="timeCheckboxClick(this)">
+                        <h3 class="dayname">Monday</h3>
+                        <div class="calltimes time">
+                            <div class="custom-time-picker" id="timePicker1">
+                                <div class="custom-select-wrapper" id="timeWrapper1">
+                                    <div class="custom-select" id="timeMondayFrom" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions1"></div>
+                                </div>
+                            </div>
+                            <p>-</p>
+                            <div class="custom-time-picker" id="timePicker2">
+                                <div class="custom-select-wrapper" id="timeWrapper2">
+                                    <div class="custom-select" id="timeMondayTo" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <input class="checkbox" type="checkbox" id="Tuesday" checked checked
+                            onclick="timeCheckboxClick(this)">
+                        <h3 class="dayname">Tuesday</h3>
+                        <div class="calltimes time">
+                            <div class="custom-time-picker" id="timePicker3">
+                                <div class="custom-select-wrapper" id="timeWrapper3">
+                                    <div class="custom-select" id="timeTuesdayFrom" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions3"></div>
+                                </div>
+                            </div>
+                            <p>-</p>
+                            <div class="custom-time-picker" id="timePicker4">
+                                <div class="custom-select-wrapper" id="timeWrapper4">
+                                    <div class="custom-select" id="timeTuesdayTo" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions4"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <input class="checkbox" type="checkbox" id="Wednesday" checked checked
+                            onclick="timeCheckboxClick(this)">
+                        <h3 class="dayname">Wednesday</h3>
+                        <div class="calltimes time">
+                            <div class="custom-time-picker" id="timePicker5">
+                                <div class="custom-select-wrapper" id="timeWrapper5">
+                                    <div class="custom-select" id="timeWednesdayFrom" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions5"></div>
+                                </div>
+                            </div>
+                            <p>-</p>
+                            <div class="custom-time-picker" id="timePicker6">
+                                <div class="custom-select-wrapper" id="timeWrapper6">
+                                    <div class="custom-select" id="timeWednesdayTo" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions6"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <input class="checkbox" type="checkbox" id="Thursday" checked checked
+                            onclick="timeCheckboxClick(this)">
+                        <h3 class="dayname">Thursday</h3>
+                        <div class="calltimes time">
+                            <div class="custom-time-picker" id="timePicker7">
+                                <div class="custom-select-wrapper" id="timeWrapper7">
+                                    <div class="custom-select" id="timeThursdayFrom" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions7"></div>
+                                </div>
+                            </div>
+                            <p>-</p>
+                            <div class="custom-time-picker" id="timePicker8">
+                                <div class="custom-select-wrapper" id="timeWrapper8">
+                                    <div class="custom-select" id="timeThursdayTo" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions8"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <input class="checkbox" type="checkbox" id="Friday" checked checked
+                            onclick="timeCheckboxClick(this)">
+                        <h3 class="dayname">Friday</h3>
+                        <div class="calltimes time">
+                            <div class="custom-time-picker" id="timePicker9">
+                                <div class="custom-select-wrapper" id="timeWrapper9">
+                                    <div class="custom-select" id="timeFridayFrom" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions9"></div>
+                                </div>
+                            </div>
+                            <p>-</p>
+                            <div class="custom-time-picker" id="timePicker10">
+                                <div class="custom-select-wrapper" id="timeWrapper10">
+                                    <div class="custom-select" id="timeFridayTo" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions10"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <input class="checkbox" type="checkbox" id="Saturday" checked checked
+                            onclick="timeCheckboxClick(this)">
+                        <h3 class="dayname">Saturday</h3>
+                        <div class="calltimes time">
+                            <div class="custom-time-picker" id="timePicker11">
+                                <div class="custom-select-wrapper" id="timeWrapper11">
+                                    <div class="custom-select" id="timeSaturdayFrom" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions11"></div>
+                                </div>
+                            </div>
+                            <p>-</p>
+                            <div class="custom-time-picker" id="timePicker12">
+                                <div class="custom-select-wrapper" id="timeWrapper12">
+                                    <div class="custom-select" id="timeSaturdayTo" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions12"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <input class="checkbox" type="checkbox" id="Sunday" checked checked
+                            onclick="timeCheckboxClick(this)">
+                        <h3 class="dayname">Sunday</h3>
+                        <div class="calltimes time">
+                            <div class="custom-time-picker" id="timePicker13">
+                                <div class="custom-select-wrapper" id="timeWrapper13">
+                                    <div class="custom-select" id="timeSundayFrom" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions13"></div>
+                                </div>
+                            </div>
+                            <p>-</p>
+                            <div class="custom-time-picker" id="timePicker14">
+                                <div class="custom-select-wrapper" id="timeWrapper14">
+                                    <div class="custom-select" id="timeSundayTo" contenteditable></div>
+                                    <div class="custom-options" id="timeOptions14"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question">
+                <h2>6. Do you have anything else to say?</h2>
+                <p class="description">*leave empty if not</p>
+                <input class="line-input" type="text" id="info">
+            </div>
+            <div class="submit-btn">
+                <div class="action-btn"><a id="submit"><span>Submit</span></a></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="script.js"> </script>
+
+</html>

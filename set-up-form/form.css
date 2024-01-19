@@ -1,0 +1,291 @@
+/* SETUP --------------------------------------------------------------------------------------------------------------*/
+@font-face {
+    font-family: Raleway;
+    src: url(../graphics/Raleway.ttf);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #25333a;
+    border: none;
+    border-radius: 1px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Raleway;
+    box-sizing: border-box;
+    box-sizing: inherit;
+    transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    color: black;
+    background-color: #12181b;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.border {
+    border: 2px solid;
+    border-color: red;
+}
+
+.sub {
+    height: 5000px;
+    background: rgb(18, 24, 27);
+    background: linear-gradient(180deg, rgba(18, 24, 27, 1) 24%, rgba(29, 35, 48, 1) 81%);
+}
+
+/* FORM -----------------------------------------------------------------------------------------------------*/
+.form {
+    background-color: rgb(255, 167, 95);
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    transition: all 1s;
+}
+
+.form .main {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #fce6cd;
+}
+
+.form h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+
+}
+
+.form .question {
+    width: 750px;
+    margin-top: 120px;
+}
+
+.form .question input {
+    margin-top: 0.5em;
+}
+
+.form .question .line-input {
+    border: none;
+    outline: none;
+    height: 25px;
+    width: 500px;
+    font-size: 1.1em;
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.form .question .medium-input {
+    border: 2px solid black;
+    background-color: transparent;
+    outline: none;
+    width: 500px;
+    height: 70px;
+    font-size: 1.1em;
+    resize: none;
+}
+
+.form .question .minute-input {
+    display: flex;
+    align-items: center;
+}
+
+.form .question .minute-input p {
+    margin-left: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    height: min-content;
+}
+
+.form .question .minute-input input {
+    font-size: 2em;
+    font-weight: 300;
+    width: 2em;
+    height: 1em;
+    border: 1.5px solid black;
+    outline: none;
+    margin: 0px;
+}
+
+.form #days {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.form .question .calltimes {
+    display: flex;
+    align-items: center;
+}
+
+.form .question .day input {
+    margin: 0;
+    border: 1.5px solid black;
+    outline: none;
+}
+
+.form .question .day .checkbox {
+    width: 30px;
+    height: 30px;
+}
+
+
+.form .question .day {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 40px 150px 900px;
+}
+
+.form .question .checkboxx {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    margin: 0px;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+
+}
+
+.form .question .checkboxx p {
+    height: min-content;
+}
+
+.form .question .checkboxx input {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+
+}
+
+
+.yes-or-no .answer {
+    display: flex;
+    justify-items: bottom;
+    display: grid;
+    grid-template-columns: 50px 50px;
+}
+
+.yes-or-no .answer p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.yes-or-no .answer input {
+    margin: 0;
+}
+
+.question .showonyes {
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.form #two {
+    margin-bottom: 0;
+}
+
+.form .destwo {
+    margin-bottom: 20px;
+}
+
+#smthngelse {
+    margin-top: 20px;
+}
+
+.submit-btn {
+    display: grid;
+    place-content: center;
+    margin: 100px;
+    margin-bottom: 20px;
+}
+
+.form .timezonefield {
+    height: 35px;
+}
+
+.form .timezonefield input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 0px;
+
+}
+
+label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+    background-color: #f9f9f9;
+    width: 100px;
+  }
+
+  .custom-select {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+
+  .custom-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .custom-options div {
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .custom-select-wrapper.open .custom-options {
+    display: block;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+  }
