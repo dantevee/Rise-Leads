@@ -277,6 +277,10 @@ label {
     }
 
     .form .question .day {
-        grid-template-columns: 40px 120px 900px;
+        grid-template-columns: 40px 100px 100px;
+    }
+
+    .form .question .day h3 {
+        font-size: 1em;
     }
 }
