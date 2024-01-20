@@ -1,33 +1,3 @@
-function yesOrNoCheckboxPressed(answer) {
-  if (answer == 1) {
-    document.getElementById("no").checked = false;
-    let showOnYes = document.getElementsByClassName("showonyes");
-
-    for (let i = 0; i < showOnYes.length; i++) {
-      showOnYes[i].style.visibility = "visible";
-    }
-  } else if (answer == 0) {
-    document.getElementById("yes").checked = false;
-    let showOnYes = document.getElementsByClassName("showonyes");
-
-    for (let i = 0; i < showOnYes.length; i++) {
-      showOnYes[i].style.visibility = "hidden";
-    }
-  }
-}
-
-function timeCheckboxClick(checkbox) {
-  let parent = checkbox.parentElement;
-  let calltimes = parent.querySelectorAll(".time");
-  for (let i = 0; i < calltimes.length; i++) {
-    if (checkbox.checked) {
-      calltimes[i].style.visibility = "visible";
-    } else {
-      calltimes[i].style.visibility = "hidden";
-    }
-  }
-}
-
 class TimePicker {
   constructor(id, timeId) {
     this.timeWrapper = document.getElementById(`timeWrapper${id}`);
@@ -123,9 +93,6 @@ const sundayTo = new TimePicker(14, "timeSundayTo");
 let submitButton = document.getElementById("submit");
 submitButton.addEventListener("click", () => {
   const name = document.getElementById("name").value;
-  const conditions = document.getElementById("conditions").value;
-  const callLength = document.getElementById("callLength").value;
-  const countryOrTimezone = document.getElementById("country").value;
 
   let availability = {
     Monday: [false, , null],
@@ -148,13 +115,8 @@ submitButton.addEventListener("click", () => {
     }
   }
 
-  const info = document.getElementById("info").value;
-
   const user = {
     fullName: name,
-    clientConditions: conditions,
-    lenghtCall: callLength,
-    countryTimezone: countryOrTimezone,
     timeAvailability: availability,
     aditionalInfo: info,
   };

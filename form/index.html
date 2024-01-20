@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- ADD USER DATABASE WHERE THEY LIG IN VIA EMAIL AND THEY CAN CHOOSE WHEN THEY DONT WANT CALLS -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,36 +19,7 @@
             </div>
 
             <div class="question">
-                <h2>2. Do you have any conditions <br>that your clients must meet?</h2>
-                <div class="yes-or-no">
-                    <div class="answer">
-                        <p>Yes</p><input type="checkbox" id="yes" onclick="yesOrNoCheckboxPressed(1)">
-                    </div>
-                    <div class="answer">
-                        <p>no</p><input type="checkbox" id="no" onclick="yesOrNoCheckboxPressed(0)">
-                    </div>
-                </div>
-                <p class="showonyes" style="margin-top: 20px;">What Conditions?</p>
-                <input class="line-input showonyes" type="text" id="conditions">
-            </div>
-
-            <div class="question">
-                <h2>3. How long is your 1st call <br>with prospect?</h2>
-                <div class="minute-input">
-                    <input class="time-interval" type="number" min="10" placeholder="30" id="callLength">
-                    <p>minutes</p>
-                </div>
-            </div>
-
-            <div class="question">
-                <h2>4. Wha is your Timezone or Country?</h2>
-                <div class="timezonefield">
-                    <input type="text" id="country" name="country" placeholder="E.g., United States" required>
-                </div>
-            </div>
-
-            <div class="question">
-                <h2>5. When do you want your calls?</h2>
+                <h2>2. When do you want your calls?</h2>
                 <div id="days">
                     <div class="day">
                         <input class="checkbox" type="checkbox" id="Monday" checked onclick="timeCheckboxClick(this)">
@@ -195,7 +164,7 @@
             </div>
 
             <div class="question">
-                <h2>6. Do you have anything else to say?</h2>
+                <h2>3. Do you have anything else to say?</h2>
                 <p class="description">*leave empty if not</p>
                 <input class="line-input" type="text" id="info">
             </div>
@@ -208,6 +177,6 @@
 </body>
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="form-script.js"> </script>
+<script src="script.js"> </script>
 
 </html>
